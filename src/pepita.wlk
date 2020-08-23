@@ -1,4 +1,4 @@
-/** Tus objetos van aquí... */
+/** Tus objetos van acá... */
 
 object pepita {
 	
