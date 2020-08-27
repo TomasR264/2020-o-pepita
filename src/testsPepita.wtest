@@ -14,6 +14,45 @@ describe "tests de pepita" {
 		pepita.comer(alpiste)
 		assert.equals(600, pepita.energia())
 	}
+	
+	test "el postre light no aporta energia"{
+		assert.equals(0,postreLight.aporteEnergetico())
+	}
+	
+	test "nemo aporta la raiz cuadrada de su edad" {
+		assert.equals(3,nemo.aporteEnergetico())
+	}
+	
+	test "pepita esta empachada si supera el limite" {
+		pepita.comer(alpiste)
+		assert.that(pepita.estaEmpachada())
+	}
+	
+	test "pepita no esta empachada si no supera el limite" {
+		assert.notThat(pepita.estaEmpachada())
+	}
+	
+	test "pepita esta satisfecha si la energia esta en el rango (caso borde)" {
+		assert.that(pepita.estaSatisfecha())
+	}
+	
+	test "pepita no esta satisfecha si la energia no esta en el rango" {
+		pepita.vola(150)
+		assert.notThat(pepita.estaSatisfecha())
+		// faltaría otro con el otro lado del rango... (y el otro caso borde)
+	}
+	
+	test "pepita tiene hambre si no esta empachada ni satisfecha" {
+		pepita.vola(150)
+		assert.that(pepita.tieneHambre())
+	}
+	
+	test "pepita no tiene hambre si esta empachada o satisfecha" {
+		assert.notThat(pepita.tieneHambre())
+	}
+	
+	// Faltarían los casos borde...
+	// pero lo importante es CÓMO pensar los tests, cómo pensar el programa.
 }
 
 
