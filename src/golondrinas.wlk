@@ -9,6 +9,10 @@ object pepita {
 	}
 	
 	method energia() = energia
+	
+	method comer(comida){
+		energia = energia + comida.aporteEnergetico()
+	}
 }
 
 object alpiste {

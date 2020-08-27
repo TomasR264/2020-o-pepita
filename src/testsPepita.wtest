@@ -9,6 +9,11 @@ describe "tests de pepita" {
 	test "el alpiste dice su aporte bien" {
 		assert.equals(400, alpiste.aporteEnergetico())
 	}
+	
+	test "al comer alpiste pepita engorda" {
+		pepita.comer(alpiste)
+		assert.equals(600, pepita.energia())
+	}
 }
 
 
