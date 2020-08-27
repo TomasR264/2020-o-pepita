@@ -1,0 +1,10 @@
+import golondrinas.*
+
+describe "tests de pepita" {
+	test "Pepita vuela bien" {
+		pepita.vola(20)
+		assert.equals(170,pepita.energia())
+	}	
+}
+
+
